@@ -30,8 +30,12 @@ public class TelaInterna extends JInternalFrame {
 		panel.repaint();
 	}
 	
-	public void mostrePontos( int qtde, List<Point> lista, Classe aClasse ) {
-		panel.mostrePontos( qtde, lista, aClasse );
+	public void mostrePontos( int[][] ptos, Classe c ) {
+		panel.mostrePontos( ptos, c );
+	}
+	
+	public void mostrePontos__OOLD( int qtde, List<Point> lista, Classe aClasse ) {
+		panel.mostrePontos__OLD( qtde, lista, aClasse );
 	}
 	
 	public void registraPonto( int qtde, List<Point> lista, Classe aClasse ) {

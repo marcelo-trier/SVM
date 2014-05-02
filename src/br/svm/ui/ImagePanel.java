@@ -36,7 +36,14 @@ public class ImagePanel extends JPanel implements MouseListener {
 		setImage( img );
 	}
 	
-	public void mostrePontos( int qtde, List<Point> l, Classe c ) {
+	public void mostrePontos( int[][] ptos, Classe c ) {
+		aClasse = c;
+		for( int[] pto : ptos ) {
+			drawPoint( pto[0], pto[1] );
+		}
+	}
+	
+	public void mostrePontos__OLD( int qtde, List<Point> l, Classe c ) {
 		aClasse = c;
 		//umaCor = Classe.Cores[ c.ordinal() ];
 		//umaCor = c;
@@ -88,10 +95,6 @@ public class ImagePanel extends JPanel implements MouseListener {
 			this.removeMouseListener( this ); 
 			if( adicionaPontos ) {
 				adicionaPontos = false;
-				if( umaLista.size() > Classe.PONTOSSS[0][0].length ){
-					umaLista.clear();
-					return;
-				}
 				
 				Classe.addPoint( aClasse, umaLista );
 				/*int i=0;
